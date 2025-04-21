@@ -5,8 +5,16 @@
     font-weight: 300;
 }
 
+body{
+    background: #1a98c9;
+    background: -webkit-linear-gradient(139deg, rgba(26, 152, 201, 1) 6%, rgba(255, 157, 0, 1) 83%);
+    background: -moz-linear-gradient(139deg, rgba(26, 152, 201, 1) 6%, rgba(255, 157, 0, 1) 83%);
+    background: linear-gradient(139deg, rgba(26, 152, 201, 1) 6%, rgba(255, 157, 0, 1) 83%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1A98C9", endColorstr="#FF9D00", GradientType=0);
+}
+
 .glass {
     background-color: rgb(255, 255, 255, 0.2);
     backdrop-filter: blur(50px);
-    box-shadow: 2px 2px 2px rgba(30,30,30,0.5);
+    box-shadow: 2px 2px 2px 2px rgba(30,30,30,0.1);
   }
