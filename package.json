@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
+    "@supabase/supabase-js": "^2.49.4",
+    "@tailwindcss/vite": "^4.1.4",
+    "dotenv": "^16.5.0",
+    "openai": "^4.95.0",
+    "react-audio-voice-recorder": "^2.2.0",
+    "react-media-recorder": "^1.7.1",
+    "react-speech-recognition": "^4.0.0",
+    "tailwindcss": "^4.1.4"
+  }
+}
