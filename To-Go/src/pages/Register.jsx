@@ -1,11 +1,38 @@
 import { useState } from 'react'
 import supabase from '../helper/SupabaseClient'
+import { AuthContextProvider } from '../AuthContext'
+import { UserAuth } from '../AuthContext'
+import { useNavigate } from 'react-router'
 
 
 function Register() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [message, setMessage] = useState("")
+    const [error, setError] = useState("")
+    const [loading, setLoading] = useState(false)
+
+    const { session, signUpNewUser } = UserAuth();
+
+    const navigate = useNavigate();
+
+    const handleSignUp = async (e) => {
+        e.preventDefault()
+
+        setLoading(true)
+        try {
+            const result = await signUpNewUser(email, password)
+
+            if (result.success) {
+                navigate('/dashboard')
+            }
+        } catch (error) {
+            setError(error)
+        } finally {
+            setLoading(false)
+        }
+    }
+
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -32,7 +59,8 @@ function Register() {
         <div className="flex justify-center items-center h-svh bg-[url('/pexels-pok-rie-33563-2894260.jpg')] bg-no-repeat bg-cover bg-center">
             <div className='flex flex-col lg:flex-row justify-center items-center gap-x-15 border p-10 rounded-2xl glass'>
                 <h1 className='text-5xl p-5'>Register</h1>
-                <form onSubmit={handleSubmit}>
+                {error && <p className='text-red-500 text-center p-2'>There was an error: {error}</p>}
+                <form onSubmit={handleSignUp}>
                     <div className='flex flex-col gap-y-3'>
                         <input
                             className='p-2 glass rounded-full'

@@ -13,37 +13,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          {/* home */}
-          <Route
-            path="/"
-            element={<Home />}
-          />
 
-          {/* Register */}
-          <Route
-            path="/register"
-            element={<Register />}
-          />
-
-          {/* Login */}
-          <Route
-            path="/login"
-            element={<Login />}
-          />
-
-          {/* Dashboard */}
-
-          <Route path="/dashboard" element={
-            <AuthWrapper>
-              <Dashboard />
-            </AuthWrapper>
-          } />
-
-
-        </Routes>
-      </BrowserRouter>
     </>
   )
 }
