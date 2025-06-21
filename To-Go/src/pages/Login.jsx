@@ -27,13 +27,14 @@ function Login() {
         }
         if (data) {
             setMessage("Welcome.")
+            localStorage.setItem("token")
             navigate("/dashboard")
         }
 
 
     }
     return (
-        <div className='flex justify-center items-center h-svh bg-login'>
+        <div className="flex justify-center items-center h-svh bg-[url('/pexels-diva-31804635.jpg')] bg-center bg-no-repeat bg-cover">
             <div className='flex flex-col lg:flex-row justify-center items-center gap-x-15 border p-10 rounded-2xl glass '>
                 <h1 className='text-5xl p-5'>Login</h1>
                 <form onSubmit={handleSubmit}>

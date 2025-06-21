@@ -68,10 +68,10 @@ export default function AudioCollector() {
                 </div>
             </div>
 
-            <div className='flex flex-col justify-center items-center mt-15'>
-                <div className='flex flex-col justify-center items-center rounded-2xl glass'>
+            <div className=''>
+                <div className='rounded-2xl glass'>
 
-                    <div className='flex flex-col p-5 gap-x-5'>
+                    <div className='p-5 gap-x-5'>
                         <div className='rounded-2xl max-w-88'>
                             <h1 className='text-sm p-1 italic text-gray-400'>Speak in {language} and it will show up below...</h1>
 
@@ -90,9 +90,9 @@ export default function AudioCollector() {
                         {
                             isRecording
                                 ?
-                                <div className='flex justify-around items-center mt-8 mb-3'><button onClick={stopRecording} className={`btn flex text-center scale-200 p-2 rounded-full bg-red-500 transition-all duration-200`}> <StopCircleIcon /> </button></div>
+                                <div className='flex mt-8 mb-3'><button onClick={stopRecording} className={`btn flex text-center scale-200 p-2 rounded-full bg-red-500 transition-all duration-200`}> <StopCircleIcon /> </button></div>
                                 :
-                                <div className='flex justify-center items-center mt-8 gap-x-3 mb-3'>
+                                <div className='flex mt-8 gap-x-3 mb-3'>
                                     <button onClick={startRecording} className={`btn flex text-center py-4 px-5 p-2 rounded-full bg-green-400 transition-all duration-200`}> <PlayCircleFilledWhiteIcon /> </button>
                                     <details className="dropdown">
                                         <summary className="btn m-1 z-100"><TranslateIcon /></summary>

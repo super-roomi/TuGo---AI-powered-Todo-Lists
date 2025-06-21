@@ -29,7 +29,7 @@ function Register() {
         setPassword("")
     }
     return (
-        <div className='flex justify-center items-center h-svh bg-register'>
+        <div className="flex justify-center items-center h-svh bg-[url('/pexels-pok-rie-33563-2894260.jpg')] bg-no-repeat bg-cover bg-center">
             <div className='flex flex-col lg:flex-row justify-center items-center gap-x-15 border p-10 rounded-2xl glass'>
                 <h1 className='text-5xl p-5'>Register</h1>
                 <form onSubmit={handleSubmit}>
