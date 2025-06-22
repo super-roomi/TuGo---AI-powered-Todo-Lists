@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import OpenAI from 'openai'
 import { useSpeechRecognition } from 'react-speech-recognition'
 import { List, Checkbox, Button, CircularProgress } from '@mui/material';
-import { v4 as uuidv4 } from 'uuid';
 import TodoMaker from './TodoMaker';
 
 const openai = new OpenAI({
@@ -18,8 +17,7 @@ export default function AiProcess() {
     const [textArray, setTextArray] = useState([])
     const [loading, setLoading] = useState(false)
     const [isChecked, setisChecked] = useState(false)
-    // const [preText, setPreText] = useState(true)
-    //const todos = {}
+
 
     const handleChecked = () => {
         if (isChecked == false) {
@@ -80,20 +78,17 @@ export default function AiProcess() {
 
     return (
         <>
-            <div className='flex flex-col items-center gap-5 mt-7'>
+            <div className='flex flex-col gap-5 mt-7 mb-7'>
                 <div className='flex flex-row gap-10'>
                     {/* {preText ? <h1 className='text-xl'>Click Generate to make your Todo! </h1> : <h1>Your todo list for {date.getDate()}/{date.getMonth()}/{date.getFullYear()}</h1>} */}
-                    <button onClick={ProcessedText} className='btn'>
-                        Generate
+                    <button onClick={() => ProcessedText} className='btn'>
+                        Go!
                     </button>
                 </div>
-                <List />
 
-                <div className='flex text-lg rounded-3xl p-3'>
+                {/* <div className='flex text-lg rounded-3xl p-3'>
                     {loading ? <CircularProgress className='m-5' /> : <ul className='flex flex-col'>
                         {textArray.map((todo, index) => {
-                            let counter = 0
-
                             let pos = (index + 1) % 3
                             if (pos == 1) {
                                 //category
@@ -118,9 +113,7 @@ export default function AiProcess() {
                             }
                         })}
                     </ul>}
-                </div>
-                <div className='flex flex-col gap-y-2'>
-                </div>
+                </div> */}
             </div>
         </>
     )

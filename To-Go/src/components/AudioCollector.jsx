@@ -57,7 +57,7 @@ export default function AudioCollector() {
 
     return (
         <>
-            <div className="glass flex justify-between items-center rounded-full p-2 mt-6 mx-5">
+            {/* <div className="glass flex justify-between items-center rounded-full p-2 mt-6 mx-5">
                 <div className="flex flex-row items-center p-2 gap-x-2">
                     <Avatar />
                     <p>Username</p>
@@ -66,12 +66,11 @@ export default function AudioCollector() {
                 <div className="flex flex-row items-center">
                     <button onClick={signOut} className="bg-sky-500 mr-1 py-2 px-3 rounded-full text-md transition-all hover:bg-orange-400 hover:text-white hover:cursor-pointer ease-in-out duration-250">Log out</button>
                 </div>
-            </div>
+            </div> */}
 
             <div className=''>
-                <div className='rounded-2xl glass'>
-
-                    <div className='p-5 gap-x-5'>
+                <div className=''>
+                    <div className='flex flex-col items-center p-5 gap-x-5 border rounded-2xl lg:max-w-100 mx-3 glass mt-2'>
                         <div className='rounded-2xl max-w-88'>
                             <h1 className='text-sm p-1 italic text-gray-400'>Speak in {language} and it will show up below...</h1>
 
